@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36127.28
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI.Server", "WebUI.Server\WebUI.Server.csproj", "{436171DC-FDA0-496B-BD37-2D5E79758F7F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EuskaraBlog.WebUI.Server", "WebUI.Server\EuskaraBlog.WebUI.Server.csproj", "{436171DC-FDA0-496B-BD37-2D5E79758F7F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EuskaraBlog.Domain", "EuskaraBlog.Domain\EuskaraBlog.Domain.csproj", "{32B6608A-F41C-40E7-887C-A22C61793468}"
 EndProject

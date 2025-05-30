@@ -1,6 +1,6 @@
 using EuskaraBlog.Application;
 using EuskaraBlog.Infrastructure;
-using WebUI.Server.Components;
+using EuskaraBlog.WebUI.Server.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
