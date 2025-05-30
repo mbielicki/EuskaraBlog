@@ -37,7 +37,7 @@ else
     {
 		await Task.Delay(1000); // Simulate a delay for loading data
 
-		var result = ArticleService.GetAllArticles();
+		var result = await ArticleService.GetAllArticlesAsync();
 		if (result is not null)
 			articles = result;
 	}

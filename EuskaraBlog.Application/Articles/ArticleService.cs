@@ -9,14 +9,16 @@ namespace EuskaraBlog.Application.Articles
 {
     public class ArticleService : IArticleService
     {
-        public List<Article> GetAllArticles()
+        private readonly IArticleRepository _articleRepository;
+
+        public ArticleService(IArticleRepository articleRepository)
         {
-            return new List<Article>
-            {
-                new Article { Id = 1, Title = "Learn Euskara", Content = "The Basque langue (euskara) is the oldest language in Europe..."},
-                new Article { Id = 2, Title = "Our methodology", Content = "Our approach to teaching Euskara is immersive and practical..."},
-                new Article { Id = 3, Title = "Pronounciation guide", Content = "Euskara pronunciation is straightforward and mostly phonetic..."}
-            };
+            _articleRepository = articleRepository;
+        }
+
+        public async Task<List<Article>> GetAllArticlesAsync()
+        {
+            return await _articleRepository.GetAllArticlesAsync();
         }
     }
 }

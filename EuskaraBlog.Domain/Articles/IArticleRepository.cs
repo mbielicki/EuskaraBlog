@@ -1,13 +1,12 @@
-﻿using EuskaraBlog.Domain.Articles;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EuskaraBlog.Application.Articles
+namespace EuskaraBlog.Domain.Articles
 {
-    public interface IArticleService
+    public interface IArticleRepository
     {
         Task<List<Article>> GetAllArticlesAsync();
     }
