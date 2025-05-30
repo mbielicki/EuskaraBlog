@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\dev\\EuskaraBlog\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{436171DC-FDA0-496B-BD37-2D5E79758F7F}|WebUI.Server\\WebUI.Server.csproj|c:\\dev\\euskarablog\\webui.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{436171DC-FDA0-496B-BD37-2D5E79758F7F}|WebUI.Server\\WebUI.Server.csproj|solutionrelative:webui.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{436171DC-FDA0-496B-BD37-2D5E79758F7F}|WebUI.Server\\WebUI.Server.csproj|c:\\dev\\euskarablog\\webui.server\\components\\pages\\articles.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{436171DC-FDA0-496B-BD37-2D5E79758F7F}|WebUI.Server\\WebUI.Server.csproj|solutionrelative:webui.server\\components\\pages\\articles.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{436171DC-FDA0-496B-BD37-2D5E79758F7F}|WebUI.Server\\WebUI.Server.csproj|c:\\dev\\euskarablog\\webui.server\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{436171DC-FDA0-496B-BD37-2D5E79758F7F}|WebUI.Server\\WebUI.Server.csproj|solutionrelative:webui.server\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{32B6608A-F41C-40E7-887C-A22C61793468}|EuskaraBlog.Domain\\EuskaraBlog.Domain.csproj|c:\\dev\\euskarablog\\euskarablog.domain\\articles\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32B6608A-F41C-40E7-887C-A22C61793468}|EuskaraBlog.Domain\\EuskaraBlog.Domain.csproj|solutionrelative:euskarablog.domain\\articles\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +30,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\dev\\EuskaraBlog\\WebUI.Server\\Program.cs",
-              "RelativeDocumentMoniker": "WebUI.Server\\Program.cs",
-              "ToolTip": "C:\\dev\\EuskaraBlog\\WebUI.Server\\Program.cs",
-              "RelativeToolTip": "WebUI.Server\\Program.cs",
+              "DocumentIndex": 1,
+              "Title": "Article.cs",
+              "DocumentMoniker": "C:\\dev\\EuskaraBlog\\EuskaraBlog.Domain\\Articles\\Article.cs",
+              "RelativeDocumentMoniker": "EuskaraBlog.Domain\\Articles\\Article.cs",
+              "ToolTip": "C:\\dev\\EuskaraBlog\\EuskaraBlog.Domain\\Articles\\Article.cs",
+              "RelativeToolTip": "EuskaraBlog.Domain\\Articles\\Article.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T07:28:12.557Z",
+              "WhenOpened": "2025-05-30T10:23:55.446Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\dev\\EuskaraBlog\\WebUI.Server\\Components\\App.razor",
-              "RelativeDocumentMoniker": "WebUI.Server\\Components\\App.razor",
-              "ToolTip": "C:\\dev\\EuskaraBlog\\WebUI.Server\\Components\\App.razor",
-              "RelativeToolTip": "WebUI.Server\\Components\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Articles.razor",
+              "DocumentMoniker": "C:\\dev\\EuskaraBlog\\WebUI.Server\\Components\\Pages\\Articles.razor",
+              "RelativeDocumentMoniker": "WebUI.Server\\Components\\Pages\\Articles.razor",
+              "ToolTip": "C:\\dev\\EuskaraBlog\\WebUI.Server\\Components\\Pages\\Articles.razor*",
+              "RelativeToolTip": "WebUI.Server\\Components\\Pages\\Articles.razor*",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-30T07:08:08.485Z",
+              "WhenOpened": "2025-05-30T09:31:51.968Z",
               "EditorCaption": ""
             }
           ]
