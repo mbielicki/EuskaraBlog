@@ -1,0 +1,30 @@
+﻿@page "/write"
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@attribute [StreamRendering]
+
+<PageTitle>Write New Article</PageTitle>
+
+<h3>Write</h3>
+
+@if(string.IsNullOrEmpty(userId))
+{
+    <p><em>Loading user information...</em></p>
+}
+else
+{
+    <p>Your User ID: @userId</p>
+    <p>Here you can write a new article.</p>
+    <!-- Add your form or editor for writing an article here -->
+}
+
+
+@code {
+    private string? userId;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        userId = user.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier")?.Value;
+    }
+}
