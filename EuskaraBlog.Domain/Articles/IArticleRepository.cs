@@ -9,5 +9,6 @@ namespace EuskaraBlog.Domain.Articles
     public interface IArticleRepository
     {
         Task<List<Article>> GetAllArticlesAsync();
+        Task<int> CreateArticleAsync(Article article);
     }
 }

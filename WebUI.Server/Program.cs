@@ -1,4 +1,5 @@
 using EuskaraBlog.Application;
+using EuskaraBlog.Application.Articles.CreateArticle;
 using EuskaraBlog.Infrastructure;
 using EuskaraBlog.WebUI.Server.Components;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
@@ -26,6 +27,9 @@ builder.Services.AddRazorPages().AddMvcOptions(options =>
                   .Build();
     options.Filters.Add(new AuthorizeFilter(policy));
 }).AddMicrosoftIdentityUI();
+
+
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<CreateArticleCommand>());
 
 
 var app = builder.Build();

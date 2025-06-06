@@ -17,6 +17,13 @@ namespace EuskaraBlog.Infrastructure.Repositories
             _context = context;
         }
 
+        public async Task<int> CreateArticleAsync(Article article)
+        {
+            await _context.Articles.AddAsync(article);
+            await _context.SaveChangesAsync();
+            return article.Id;
+        }
+
         public async Task<List<Article>> GetAllArticlesAsync()
         {
             return await _context.Articles
