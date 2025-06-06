@@ -1,0 +1,48 @@
+﻿@using EuskaraBlog.Application.Articles.CreateArticle
+@inject IMediator Mediator
+
+<EditForm Model="Article" OnValidSubmit="HandleValidSubmit" FormName="ArticleEditorForm">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label>Title:</label>
+        <InputText @bind-Value="Article!.Title" class="form-control" />
+    </div>
+    <div>
+        <label>Content:</label>
+        <InputTextArea @bind-Value="Article.Content" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</EditForm>
+
+@if (submitSuccess)
+{
+    <div class="alert alert-success">Article submitted successfully!</div>
+}
+
+@code {
+    [Parameter] public EventCallback OnArticleSubmitted { get; set; }
+
+    [SupplyParameterFromForm]
+    private CreateArticleDto? Article { get; set; }
+
+    private bool submitSuccess = false;
+
+    protected override void OnInitialized()
+    {
+        Article ??= new CreateArticleDto();
+	}
+
+    private async Task HandleValidSubmit()
+    {
+        Console.WriteLine("Handling valid submit.");
+        // You may need to map DTO to your MediatR command
+        var command = new CreateArticleCommand(Article.Title, Article.Content);
+        await Mediator.Send(command);
+        submitSuccess = true;
+        if (OnArticleSubmitted.HasDelegate)
+            await OnArticleSubmitted.InvokeAsync();
+        Article = new(); // Reset form
+    }
+}

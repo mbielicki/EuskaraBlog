@@ -15,15 +15,14 @@ else if (!isAuthenticated)
 {
     <p>You must be signed in to write a new article.</p>
 }
-else if (userId == "1") // Assuming "1" is the ID of the admin user. TODO: Replace with actual admin check logic
+else if (userId == "00000000-0000-0000-d38e-5885d8cf76fa") // Assuming "1" is the ID of the admin user. TODO: Replace with actual admin check logic
 {
-    <p>Your User ID: @userId</p>
-    <p>Here you can write a new article.</p>
-    <!-- Add your form or editor for writing an article here -->
+    <ArticleEditor />
 }
 else
 {
     <p>You are not authorized to write a new article.</p>
+    @userId
 }
 
 
