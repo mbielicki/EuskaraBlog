@@ -1,0 +1,25 @@
+﻿@page "/article/{Id:int}"
+@using EuskaraBlog.Application.Articles.GetArticle
+@inject IMediator Mediator
+
+@if (article is null)
+{
+	<p>Loading...</p>
+}
+else
+{
+	<h1>@article.Title</h1>
+	<p>@article.Content</p>
+	<p><em>Published on @article.DatePublished.ToString("MMMM dd, yyyy")</em></p>
+}
+
+@code {
+	[Parameter] public int Id { get; set; }
+	private Article? article;
+
+	protected override async Task OnInitializedAsync()
+	{
+		article = await Mediator.Send(new GetArticleQuery(Id));
+	}
+
+}

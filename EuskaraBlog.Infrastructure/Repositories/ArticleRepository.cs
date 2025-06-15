@@ -31,5 +31,12 @@ namespace EuskaraBlog.Infrastructure.Repositories
                 .OrderByDescending(a => a.DatePublished)
                 .ToListAsync();
         }
+
+        public async Task<Article?> GetByIdAsync(int id)
+        {
+            return await _context.Articles
+                .Where(a => a.Id == id && a.IsPublished)
+                .FirstOrDefaultAsync();
+        }
     }
 }

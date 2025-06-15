@@ -10,5 +10,6 @@ namespace EuskaraBlog.Domain.Articles
     {
         Task<List<Article>> GetAllArticlesAsync();
         Task<int> CreateArticleAsync(Article article);
+        Task<Article?> GetByIdAsync(int id);
     }
 }
