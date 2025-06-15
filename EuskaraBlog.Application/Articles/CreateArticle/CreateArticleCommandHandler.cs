@@ -21,8 +21,10 @@ namespace EuskaraBlog.Application.Articles.CreateArticle
         {
             var article = new Article
             {
-                Title = request.Title,
-                Content = request.Content
+                Title = request.Article.Title,
+                Content = request.Article.Content,
+                IsPublished = request.Article.IsPublished,
+
             };
 
             return await _articleRepository.CreateArticleAsync(article);

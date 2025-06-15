@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EuskaraBlog.Domain.Articles;
 using MediatR;
 
 namespace EuskaraBlog.Application.Articles.CreateArticle
 {
-    public record CreateArticleCommand(string Title, string Content) : IRequest<int>;
+    public record CreateArticleCommand(CreateArticleDto Article) : IRequest<int>;
     
 }

@@ -13,6 +13,10 @@
         <label>Content:</label>
         <InputTextArea @bind-Value="Article.Content" class="form-control" />
     </div>
+    <div class="form-check">
+        <InputCheckbox @bind-Value="Article.IsPublished" class="form-check-input" />
+		<label class="form-check-label">Publish Article</label>
+	</div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </EditForm>
 
@@ -36,9 +40,7 @@
 
     private async Task HandleValidSubmit()
     {
-        Console.WriteLine("Handling valid submit.");
-        // You may need to map DTO to your MediatR command
-        var command = new CreateArticleCommand(Article.Title, Article.Content);
+        var command = new CreateArticleCommand(Article);
         await Mediator.Send(command);
         submitSuccess = true;
         if (OnArticleSubmitted.HasDelegate)

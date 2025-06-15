@@ -15,5 +15,8 @@ namespace EuskaraBlog.Domain.Articles
 
         [Required]
         public string Content { get; set; } = string.Empty;
+
+        [Required]
+        public bool IsPublished { get; set; } = false;
     }
 }
