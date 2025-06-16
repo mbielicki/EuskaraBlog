@@ -15,9 +15,9 @@ else if (!isAuthenticated)
 {
     <p>You must be signed in to write a new article.</p>
 }
-else if (userId == "00000000-0000-0000-d38e-5885d8cf76fa") // Assuming this is the ID of the admin user. TODO: Replace with actual admin check logic
+else if (!string.IsNullOrEmpty(userId) && IsAdminUser(userId))
 {
-    <ArticleEditor />
+    <ArticleEditor UserId="@userId"/>
 }
 else
 {
@@ -35,8 +35,13 @@ else
     {
         var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
         var user = authState.User;
-		isAuthenticated = user.Identity?.IsAuthenticated ?? false;
+        isAuthenticated = user.Identity?.IsAuthenticated ?? false;
         userId = user.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier")?.Value;
-		isLoading = false;
+        isLoading = false;
+    }
+
+    private bool IsAdminUser(string userId)
+    {
+		return true; // TODO Replace with actual logic to check if the user is an admin
     }
 }

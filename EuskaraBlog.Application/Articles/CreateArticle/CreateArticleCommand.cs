@@ -8,6 +8,6 @@ using MediatR;
 
 namespace EuskaraBlog.Application.Articles.CreateArticle
 {
-    public record CreateArticleCommand(CreateArticleDto Article) : IRequest<int>;
+    public record CreateArticleCommand(CreateArticleDto Article, Guid UserId) : IRequest<int>;
     
 }

@@ -26,6 +26,7 @@
 }
 
 @code {
+	[Parameter] public string? UserId { get; set; }
     [Parameter] public EventCallback OnArticleSubmitted { get; set; }
 
     [SupplyParameterFromForm]
@@ -40,7 +41,7 @@
 
     private async Task HandleValidSubmit()
     {
-        var command = new CreateArticleCommand(Article);
+        var command = new CreateArticleCommand(Article, Guid.Parse(UserId));
         await Mediator.Send(command);
         submitSuccess = true;
         if (OnArticleSubmitted.HasDelegate)
