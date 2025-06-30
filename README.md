@@ -31,3 +31,53 @@ Euskara Blog is a modern web application built with Blazor (.NET 9) that enables
 ### Configuration
 
 1. **Clone the repository**:
+```bash
+git clone <repository-url> cd EuskaraBlog
+```
+
+2. **Configure appsettings**:
+
+   - Update `WebUI.Server/appsettings.json` and `appsettings.Development.json` with your Azure AD and database settings.
+
+3. **Apply database migrations**:
+```bash
+dotnet ef database update --project EuskaraBlog.Infrastructure
+```
+
+4. **Run the application**:
+```bash
+dotnet run --project WebUI.Server
+```
+
+5. **Access the app**:
+
+Open [https://localhost:5001](https://localhost:5001) in your browser.
+
+## Usage
+
+- **View Articles**: Navigate to the "Articles" page from the navigation menu.
+- **Write Article**: 
+- Sign in with an admin account.
+- Click "Write" in the navigation menu.
+- Fill out the article form and submit.
+
+## Key Technologies
+
+- **Blazor Server** (.NET 9)
+- **Entity Framework Core** (SQL Server)
+- **Azure AD / OpenID Connect**
+- **MediatR**
+- **Clean Architecture**
+
+## Development
+
+- Visual Studio 2022 or later is recommended.
+- The solution is organized for maintainability and testability.
+
+## License
+
+This project is licensed under the (GNU AFFERO GENERAL PUBLIC LICENSE)[LICENSE.txt].
+
+---
+
+*For questions or contributions, please open an issue or submit a pull request.*
