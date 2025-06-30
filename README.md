@@ -76,7 +76,7 @@ Open [https://localhost:5001](https://localhost:5001) in your browser.
 
 ## License
 
-This project is licensed under the (GNU AFFERO GENERAL PUBLIC LICENSE)[LICENSE.txt].
+This project is licensed under the [GNU AFFERO GENERAL PUBLIC LICENSE](LICENSE.txt).
 
 ---
 
